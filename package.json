@@ -1,5 +1,5 @@
 {
-	"name": "simple-progress-webpack-plugin",
+	"name": "simple-progress-webpack-plugin-with-prefix",
 	"description": "A simple progress plugin for Webpack, coming with four different logging output formats.",
 	"version": "1.1.1",
 	"author": {
@@ -10,18 +10,16 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/dominique-mueller/simple-progress-webpack-plugin"
+		"url": "https://github.com/BenjD90/simple-progress-webpack-plugin"
 	},
-	"homepage": "https://github.com/dominique-mueller/simple-progress-webpack-plugin",
-	"bugs": {
-		"url": "https://github.com/dominique-mueller/simple-progress-webpack-plugin/issues"
-	},
+	"homepage": "https://github.com/BenjD90/simple-progress-webpack-plugin",
 	"keywords": [
 		"webpack",
 		"plugin",
 		"progress",
 		"simple",
-		"logger"
+		"logger",
+		"prefix"
 	],
 	"main": "./index.js",
 	"scripts": {
