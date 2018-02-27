@@ -51,11 +51,11 @@ module.exports = function CompactLogger( options ) {
 			}
 			previousStep = 1;
 
-			logLines.push( chalk.white( `  ${ figures.pointer } Compile modules` ) );
+			logLines.push( chalk.white( `${options.prefix}  ${ figures.pointer } Compile modules` ) );
 
 		} else if ( progress >= 0.1 ) {
 
-			logLines.push( chalk.green( `  ${ figures.tick } Compile modules` ) );
+			logLines.push( chalk.green( `${options.prefix}  ${ figures.tick } Compile modules` ) );
 
 		}
 
@@ -70,7 +70,7 @@ module.exports = function CompactLogger( options ) {
 
 			// Log progress line (with sub-progress indicator)
 			const subProgress = Math.round( ( progress - 0.1 ) * 10000 / 60 );
-			logLines.push( chalk.white( `  ${ figures.pointer } Build modules (${ subProgress }%)` ) );
+			logLines.push( chalk.white( `${options.prefix}  ${ figures.pointer } Build modules (${ subProgress }%)` ) );
 
 			// Log additional information (if possible)
 			if ( moduleName !== undefined ) {
@@ -106,13 +106,13 @@ module.exports = function CompactLogger( options ) {
 
 				const [ betterModulesDone, betterAllModules ] = moduleProgress.split( '/' );
 				const moduleDetails = `${ betterModulesDone } of ${ betterAllModules } :: ${ betterModuleName }`;
-				logLines.push( chalk.grey( `    ${ figures.arrowRight } ${ moduleDetails }` ) );
+				logLines.push( chalk.grey( `${options.prefix}    ${ figures.arrowRight } ${ moduleDetails }` ) );
 
 			}
 
 		} else if ( progress > 0.7 ) {
 
-			logLines.push( chalk.green( `  ${ figures.tick } Build modules` ) );
+			logLines.push( chalk.green( `${options.prefix}  ${ figures.tick } Build modules` ) );
 
 		}
 
@@ -127,16 +127,16 @@ module.exports = function CompactLogger( options ) {
 
 			// Log progress line (with sub-progress indicator)
 			const subProgress = Math.round( ( progress - 0.71 ) * 10000 / 23 );
-			logLines.push( chalk.white( `  ${ figures.pointer } Optimize modules (${ subProgress }%)` ) );
+			logLines.push( chalk.white( `${options.prefix}  ${ figures.pointer } Optimize modules (${ subProgress }%)` ) );
 
 			const formattedMessage = `${ message[ 0 ].toUpperCase() }${ message.slice( 1 ) }`;
 			const formattedMessageExtra = progress === 0.91 ? ' -- may take a while' : ''; // Add some extra info (calming devs down)
 
-			logLines.push( chalk.grey( `    ${ figures.arrowRight } ${ formattedMessage }${ formattedMessageExtra } ...` ) );
+			logLines.push( chalk.grey( `${options.prefix}    ${ figures.arrowRight } ${ formattedMessage }${ formattedMessageExtra } ...` ) );
 
 		} else if ( progress >= 0.95 ) {
 
-			logLines.push( chalk.green( `  ${ figures.tick } Optimize modules` ) );
+			logLines.push( chalk.green( `${options.prefix}  ${ figures.tick } Optimize modules` ) );
 
 		}
 
@@ -149,11 +149,11 @@ module.exports = function CompactLogger( options ) {
 			}
 			previousStep = 4;
 
-			logLines.push( chalk.white( `  ${ figures.pointer } Emit files` ) );
+			logLines.push( chalk.white( `${options.prefix}  ${ figures.pointer } Emit files` ) );
 
 		} else if ( progress === 1 ) {
 
-			logLines.push( chalk.green( `  ${ figures.tick } Emit files` ) );
+			logLines.push( chalk.green( `${options.prefix}  ${ figures.tick } Emit files` ) );
 
 		}
 
