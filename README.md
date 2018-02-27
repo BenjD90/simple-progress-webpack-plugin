@@ -1,23 +1,16 @@
 <div align="center">
 
-# simple-progress-webpack-plugin
+# simple-progress-webpack-plugin-with-prefix
 
 **A simple progress plugin for Webpack, coming with four different logging output formats.**
-
-[![npm version](https://img.shields.io/npm/v/simple-progress-webpack-plugin.svg?maxAge=3600&style=flat)](https://www.npmjs.com/package/simple-progress-webpack-plugin)
-[![dependency status](https://img.shields.io/david/dominique-mueller/simple-progress-webpack-plugin.svg?maxAge=3600&style=flat)](https://david-dm.org/dominique-mueller/simple-progress-webpack-plugin)
-[![dev dependency status](https://img.shields.io/david/dev/dominique-mueller/simple-progress-webpack-plugin.svg?maxAge=3600&style=flat)](https://david-dm.org/dominique-mueller/simple-progress-webpack-plugin?type=dev)
-[![travis ci build status](https://img.shields.io/travis/dominique-mueller/simple-progress-webpack-plugin/master.svg?maxAge=3600&style=flat)](https://travis-ci.org/dominique-mueller/simple-progress-webpack-plugin)
-[![Known Vulnerabilities](https://snyk.io/test/github/dominique-mueller/simple-progress-webpack-plugin/badge.svg)](https://snyk.io/test/github/dominique-mueller/simple-progress-webpack-plugin)
-[![license](https://img.shields.io/npm/l/simple-progress-webpack-plugin.svg?maxAge=3600&style=flat)](https://github.com/dominique-mueller/simple-progress-webpack-plugin/LICENSE)
-
+**Fork from https://www.npmjs.com/package/simple-progress-webpack-plugin**
 </div>
 
 <br>
 
 ## What it does
 
-**simple-progress-webpack-plugin** is a plugin for **[Webpack 2](https://webpack.js.org/)**. It improves the overall Webpack Developer
+**simple-progress-webpack-plugin-with-prefix** is a plugin for **[Webpack 2](https://webpack.js.org/)**. It improves the overall Webpack Developer
 Experience by showing a much more detailed and also visually appealing build progress in the command line. Four different output formats are
 available, from which two are ready to be used in a CI environment (such as *Travis CI*).
 
@@ -25,11 +18,11 @@ available, from which two are ready to be used in a CI environment (such as *Tra
 
 ## How to install
 
-To get the **simple-progress-webpack-plugin** via **npm**, simply add it as a new dev-dependency to your `package.json` file and run `npm
+To get the **simple-progress-webpack-plugin-with-prefix** via **npm**, simply add it as a new dev-dependency to your `package.json` file and run `npm
 install`. Alternatively, run the following command:
 
 ``` bash
-npm install simple-progress-webpack-plugin --save-dev
+npm install simple-progress-webpack-plugin-with-prefix --save-dev
 ```
 
 <br>
@@ -39,7 +32,7 @@ npm install simple-progress-webpack-plugin --save-dev
 First, import the plugin into your Webpack configuration file:
 
 ``` javascript
-const SimpleProgressWebpackPlugin = require( 'simple-progress-webpack-plugin' );
+const SimpleProgressWebpackPlugin = require( 'simple-progress-webpack-plugin-with-prefix' );
 ```
 
 Then, instantiate it within the list of plugins:
@@ -122,7 +115,7 @@ worth checking out!
 - More log output formats
 - Extended log output configurability
 
-> You can't wait for one of those features, or have some new ideas?<br>Simply **[create an issue](https://github.com/dominique-mueller/simple-progress-webpack-plugin/issues/new)**. Also, contributions to this project are highly welcomed at all time!
+> You can't wait for one of those features, or have some new ideas?<br>Simply **[create an issue](https://github.com/dominique-mueller/simple-progress-webpack-plugin-with-prefix/issues/new)**. Also, contributions to this project are highly welcomed at all time!
 
 <br>
 
