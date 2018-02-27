@@ -41,7 +41,7 @@ module.exports = function ExpandedLogger( options ) {
 			if ( previousStep > 1 ) {
 				return;
 			} else if ( previousStep < 1 ) {
-				console.log( chalk.white( `\n  ${ figures.pointer } Compile modules` ) );
+				console.log( chalk.white( `\n${options.prefix}  ${ figures.pointer } Compile modules` ) );
 			}
 			previousStep = 1;
 
@@ -54,7 +54,7 @@ module.exports = function ExpandedLogger( options ) {
 			if ( previousStep > 2 ) {
 				return;
 			} else if ( previousStep < 2 ) {
-				console.log( chalk.white( `\n  ${ figures.pointer } Build modules` ) );
+				console.log( chalk.white( `\n${options.prefix}  ${ figures.pointer } Build modules` ) );
 			}
 			previousStep = 2;
 
@@ -93,7 +93,7 @@ module.exports = function ExpandedLogger( options ) {
 
 				const [ betterModulesDone, betterAllModules ] = moduleProgress.split( '/' );
 				const moduleDetails = `${ betterModulesDone } of ${ betterAllModules } :: ${ betterModuleName }`;
-				console.log( chalk.grey( `    ${ figures.arrowRight } [${ roundedSubProgress }%] ${ moduleDetails }` ) );
+				console.log( chalk.grey( `${options.prefix}    ${ figures.arrowRight } [${ roundedSubProgress }%] ${ moduleDetails }` ) );
 
 			}
 
@@ -106,7 +106,7 @@ module.exports = function ExpandedLogger( options ) {
 			if ( previousStep > 3 ) {
 				return;
 			} else if ( previousStep < 3 ) {
-				console.log( chalk.white( `\n  ${ figures.pointer } Optimize modules` ) );
+				console.log( chalk.white( `\n${options.prefix}  ${ figures.pointer } Optimize modules` ) );
 			}
 			previousStep = 3;
 
@@ -116,7 +116,7 @@ module.exports = function ExpandedLogger( options ) {
 			const formattedMessage = `${ message[ 0 ].toUpperCase() }${ message.slice( 1 ) }`;
 			const formattedMessageExtra = progress === 0.91 ? ' -- may take a while' : ''; // Add some extra info (calming devs down)
 
-			console.log( chalk.grey( `    ${ figures.arrowRight } [${ subProgress }%] ${ formattedMessage }${ formattedMessageExtra } ...` ) );
+			console.log( chalk.grey( `${options.prefix}    ${ figures.arrowRight } [${ subProgress }%] ${ formattedMessage }${ formattedMessageExtra } ...` ) );
 
 		}
 
@@ -127,7 +127,7 @@ module.exports = function ExpandedLogger( options ) {
 			if ( previousStep > 4 ) {
 				return;
 			} else if ( previousStep < 4 ) {
-				console.log( chalk.white( `\n  ${ figures.pointer } Emit files` ) );
+				console.log( chalk.white( `\n${options.prefix}  ${ figures.pointer } Emit files` ) );
 			}
 			previousStep = 4;
 

@@ -72,9 +72,9 @@ module.exports = function VerboseLogger( options ) {
 
 		// Finally, let's bring those logs to da screen
 		if ( progress === 1 ) {
-			console.log( `\n${ getTimePrefix() } ${ logLine }` );
+			console.log( `\n${options.prefix} ${ getTimePrefix() } ${ logLine }` );
 		} else {
-			console.log( `${ getTimePrefix() } Webpack (${ Math.round( progress * 100 ) }%) - ${ logLine }` );
+			console.log( `${options.prefix} ${ getTimePrefix() } Webpack (${ Math.round( progress * 100 ) }%) - ${ logLine }` );
 		}
 
 	} );
